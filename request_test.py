@@ -5,7 +5,6 @@ r = requests.get(url)
 print(r)
 #print(r.json())
 
-
 res = r.json()['results']
 print("total_num_results:\t", res['total_num_results'])
 print("total_num_pages:\t", res['total_num_pages'])
@@ -21,3 +20,5 @@ for idx_cl in range(len(res_cl)) :
 	for idx_sub in range(len(res_cl[idx_cl]['result'])) :
 		tg = res_cl[idx_cl]['result'][idx_sub]['patent']
 		print(">>",tg['title'], "\n>>", tg['publication_number'],"\n")
+
+		
